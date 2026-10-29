@@ -1,21 +1,49 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- VERIFICACION_SEARCH_CONSOLE -->
 <link rel="icon" href="logo.png">
 <title>Respaldo Pi</title>
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #222; background: #fff; }
-  @media (prefers-color-scheme: dark) { body { color: #ddd; background: #161616; } a { color: #8ab4f8; } }
+  body { font-family: system-ui, sans-serif; max-width: 44rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #222; background: #fff; }
+  h2 { margin-top: 2rem; }
+  hr { margin: 3rem 0; border: 0; border-top: 1px solid #ccc; }
+  @media (prefers-color-scheme: dark) { body { color: #ddd; background: #161616; } a { color: #8ab4f8; } hr { border-top-color: #444; } }
 </style>
 </head>
 <body>
-<h1><img src="logo.png" alt="" width="48" height="48" style="vertical-align:middle;margin-right:.5rem">Respaldo Pi</h1>
-<p>Herramienta personal para respaldar automáticamente el directorio de usuario de mi Raspberry Pi en mi propia cuenta de Google Drive, usando <a href="https://rclone.org">rclone</a>.</p>
-<p>Los archivos se cifran antes de subirse. La herramienta solo accede a la cuenta de Google Drive de su propietario y no es un servicio público.</p>
-<p><a href="privacidad.html">Política de privacidad</a></p>
-<p>Contacto: <a href="mailto:rios.raspberrypi@gmail.com">rios.raspberrypi@gmail.com</a></p>
+<h1><img src="logo.png" alt="Respaldo Pi logo" width="48" height="48" style="vertical-align:middle;margin-right:.5rem">Respaldo Pi</h1>
+
+<p><strong>Respaldo Pi</strong> is a personal backup tool that automatically copies the files of a Raspberry Pi to its owner's own Google Drive account. It is a private, single-user tool and is not offered as a public service.</p>
+
+<h2>What it does</h2>
+<ul>
+  <li>Once a day, it scans the home directory of the owner's Raspberry Pi and uploads new or changed files to a folder in the owner's Google Drive.</li>
+  <li>Files are encrypted on the Raspberry Pi before they are uploaded, so their contents and names are not readable in Google Drive.</li>
+  <li>Previous versions of changed or deleted files are kept for 30 days so they can be restored.</li>
+  <li>It uses the open-source program <a href="https://rclone.org">rclone</a> as its upload engine.</li>
+</ul>
+
+<h2>Why it requests access to Google Drive</h2>
+<p>Respaldo Pi requests permission to access Google Drive for one purpose only: to create, update, list and delete the backup files it stores in the owner's Drive, and to read them back when the owner restores a backup. It does not read, analyze or modify any other content, and it does not access any other Google service or any personal information.</p>
+
+<h2>Privacy</h2>
+<p>No data is collected, shared or sold. Read the full <a href="https://spiritoftheriver.github.io/privacidad.html">Privacy Policy</a>.</p>
+
+<p>Contact: <a href="mailto:rios.raspberrypi@gmail.com">rios.raspberrypi@gmail.com</a></p>
+
+<hr>
+
+<div lang="es">
+<h2>Respaldo Pi (español)</h2>
+<p><strong>Respaldo Pi</strong> es una herramienta personal que copia automáticamente los archivos de una Raspberry Pi a la cuenta de Google Drive de su propietario. Es de uso privado y no es un servicio público.</p>
+<ul>
+  <li>Una vez al día sube a una carpeta del Google Drive del propietario los archivos nuevos o modificados de su Raspberry Pi.</li>
+  <li>Los archivos se cifran en la Raspberry Pi antes de subirse.</li>
+  <li>Se conservan durante 30 días las versiones anteriores de archivos modificados o borrados.</li>
+</ul>
+<p>Solicita acceso a Google Drive únicamente para crear, actualizar, listar, eliminar y leer sus propios archivos de respaldo. No accede a ningún otro contenido ni a otros servicios de Google. Consulta la <a href="https://spiritoftheriver.github.io/privacidad.html">Política de privacidad</a>.</p>
+</div>
 </body>
 </html>
